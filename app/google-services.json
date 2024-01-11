@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "626700649710",
+    "project_id": "ecoflex-b6bbd",
+    "storage_bucket": "ecoflex-b6bbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626700649710:android:b0b91a7c36c51094aa1fff",
+        "android_client_info": {
+          "package_name": "com.example.ecoflex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0HUOaSXyLXasWbE9ibCooEeRy6hPGYZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
