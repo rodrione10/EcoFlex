@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.EcoFLex" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.EcoFlex" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.EcoFLex" parent="Base.Theme.EcoFLex" />
+    <style name="Theme.EcoFlex" parent="Base.Theme.EcoFlex" />
 </resources>
