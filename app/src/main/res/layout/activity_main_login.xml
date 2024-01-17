@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/registrar"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iniciar_sesion"
@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/iniciar_sesion"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/registrar"
@@ -39,8 +39,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,17 +50,18 @@
     </ImageView>
 
     <TextView
+        style="@style/TextAppearance.Poppins"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Recicla de manera efectiva
         y encuentra puntos de
         reciclaje cercanos "
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
         android:textStyle="bold"
-        style="@style/TextAppearance.Poppins"
-        android:gravity="center">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
     </TextView>
 
     <TextView
@@ -75,7 +76,7 @@
         android:textStyle="bold"
         style="@style/TextAppearance.Poppins"
         android:gravity="center"
-        android:textSize="20dp">
+        android:textSize="30dp">
     </TextView>
 
 
