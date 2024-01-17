@@ -9,27 +9,31 @@
     <Button
         android:id="@+id/registrar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iniciar_sesion"
         android:text="Registrarme"
         app:cornerRadius="0dp"
         android:textColor="@color/black"
-        android:backgroundTint="@color/verde2">
+        android:backgroundTint="@color/verde2"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold">
     </Button>
 
     <Button
         android:id="@+id/iniciar_sesion"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/registrar"
         android:text="Iniciar Sesión"
         app:cornerRadius="0dp"
         android:textColor="@color/black"
-        android:backgroundTint="@color/verde1">
+        android:backgroundTint="@color/verde1"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold">
 
     </Button>
 
@@ -40,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="180dp"
         android:src="@drawable/logo"
         android:scaleType="centerCrop">
     </ImageView>
@@ -58,5 +62,21 @@
         style="@style/TextAppearance.Poppins"
         android:gravity="center">
     </TextView>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="EcoFlex "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/logo"
+        android:layout_marginTop="170dp"
+        android:textStyle="bold"
+        style="@style/TextAppearance.Poppins"
+        android:gravity="center"
+        android:textSize="20dp">
+    </TextView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
