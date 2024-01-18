@@ -18,7 +18,8 @@
         android:textColor="@color/black"
         android:backgroundTint="@color/verde2"
         style="@style/TextAppearance.Poppins"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        android:onClick="openRegister">
     </Button>
 
     <Button
@@ -33,7 +34,8 @@
         android:textColor="@color/black"
         android:backgroundTint="@color/verde1"
         style="@style/TextAppearance.Poppins"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        android:onClick="openLogin">
 
     </Button>
 
