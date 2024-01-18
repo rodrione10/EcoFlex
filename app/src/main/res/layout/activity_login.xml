@@ -6,4 +6,128 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+    <TextView android:id="@+id/EcoFlex"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="EcoFlex"
+        android:textStyle="bold"
+        style="@style/TextAppearance.Poppins"
+        android:textColor="@color/verde4"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
+
+    <ImageView android:id="@+id/imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/imagenlogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@+id/EcoFlex"
+        android:layout_marginTop="15dp">
+    </ImageView>
+
+    <TextView android:id="@+id/texto"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Inicia sesión en tu cuenta"
+        android:textStyle="bold"
+        style="@style/TextAppearance.Poppins"
+        android:textColor="@color/verde4"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagen"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxBackgroundMode="none">
+
+    <EditText android:id="@+id/usuario1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de Usuario"
+        app:layout_constraintTop_toBottomOf="@+id/texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextAppearance.Poppins"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:background="@drawable/edit_text_bottom_border">
+
+    </EditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:passwordToggleEnabled="true"
+        app:boxBackgroundMode="none">
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        style="@style/TextAppearance.Poppins"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bottom_border"
+       />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+    android:id="@+id/iniciar_sesion"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"
+    android:text="Ingresar"
+    app:cornerRadius="0dp"
+    android:textColor="@color/black"
+    android:backgroundTint="@color/verde1"
+    style="@style/TextAppearance.Poppins"
+    android:textStyle="bold"
+    android:onClick="openMain">
+    </Button>
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/iniciar_sesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Regístrate"
+        app:cornerRadius="0dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/verde3"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:onClick="openRegister">
+    </Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
