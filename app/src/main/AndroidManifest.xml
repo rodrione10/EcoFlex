@@ -6,12 +6,16 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_logo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_logo_foreground"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EcoFLex"
+        android:theme="@style/Base.Theme.EcoFLex"
+        android:forceDarkAllowed="false"
         tools:targetApi="31">
+        <activity
+            android:name=".MainLogin"
+            android:exported="true" />
         <activity
             android:name=".Login"
             android:exported="true" />
