@@ -6,4 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
+    <TextView android:id="@+id/EcoFlex"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="EcoFlex"
+        android:textStyle="bold"
+        style="@style/TextAppearance.Poppins"
+        android:textColor="@color/verde4"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp">
+
+    </TextView>
 </androidx.constraintlayout.widget.ConstraintLayout>
