@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainLogin">
+
+    <Button
+        android:id="@+id/registrar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iniciar_sesion"
+        android:text="Registrarme"
+        app:cornerRadius="0dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/verde2"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:onClick="openRegister">
+    </Button>
+
+    <Button
+        android:id="@+id/iniciar_sesion"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/registrar"
+        android:text="Iniciar Sesión"
+        app:cornerRadius="0dp"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/verde1"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:onClick="openLogin">
+
+    </Button>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="180dp"
+        android:src="@drawable/logo"
+        android:scaleType="centerCrop">
+    </ImageView>
+
+    <TextView
+        style="@style/TextAppearance.Poppins"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Recicla de manera efectiva
+        y encuentra puntos de
+        reciclaje cercanos "
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="EcoFlex "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/logo"
+        android:layout_marginTop="170dp"
+        android:textStyle="bold"
+        style="@style/TextAppearance.Poppins"
+        android:gravity="center"
+        android:textSize="30dp">
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
