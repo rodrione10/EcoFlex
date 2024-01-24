@@ -1,0 +1,15 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="-2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="8dp" /> <!-- Ajusta el radio según sea necesario -->
+        </shape>
+    </item>
+    <item android:right="-2dp" android:left="-2dp" android:top="-2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/verde3" /> <!-- Cambia el color de fondo a verde -->
+
+            <corners android:radius="30dp" /> <!-- Ajusta el radio según sea necesario -->
+        </shape>
+    </item>
+</layer-list>
