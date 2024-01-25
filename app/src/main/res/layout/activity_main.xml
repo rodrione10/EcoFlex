@@ -228,7 +228,7 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3">
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/verde3"
         android:text="Una tonelada de basura reciclada"
@@ -252,13 +252,14 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3">
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/verde3"
             android:text="Una tonelada de basura reciclada"
             android:textColor="@color/black"
             style="@style/TextAppearance.Poppins"
             android:textStyle="bold"
+            android:gravity="center"
             >
         </Button>
 
