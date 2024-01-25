@@ -1,37 +1,31 @@
 package com.example.ecoflex;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-public class Main extends AppCompatActivity {
 
-
-    private MenuItem prevMenuItem;
+public class Info extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.activity_info);
         BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation);
-        mybottomNavView.setSelectedItemId(R.id.home);
+        mybottomNavView.setSelectedItemId(R.id.libro);
         mybottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId()  == R.id.home ) {
+                    startActivity(new Intent(getApplicationContext(),Main.class));
+                    overridePendingTransition(0,0);
                     return true;
                 }else if (item.getItemId()  == R.id.libro ) {
-                    startActivity(new Intent(getApplicationContext(),Info.class));
-                    overridePendingTransition(0,0);
+
                     return true;
 
                 } else if (item.getItemId()  == R.id.map ) {
@@ -45,14 +39,14 @@ public class Main extends AppCompatActivity {
                 }
 
 
-
-               /*switch (item.getItemId()){
+                /*switch (item.getItemId()){
                     case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), Main.class));
+                        overridePendingTransition(0,0);
                         return true;
 
                     case R.id.libro:
-                        startActivity(new Intent(getApplicationContext(),Info.class));
-                        overridePendingTransition(0,0);
+
                         return true;
 
                     case R.id.map:
@@ -61,13 +55,12 @@ public class Main extends AppCompatActivity {
                         return true;
 
                     case R.id.user:
-                        startActivity(new Intent(getApplicationContext(), User.class));
+                        startActivity(new Intent(getApplicationContext(),User.class));
                         overridePendingTransition(0,0);
                         return true;
                 }*/
                 return false;
             }
         });
-
     }
 }

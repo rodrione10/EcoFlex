@@ -2,12 +2,14 @@ package com.example.ecoflex;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +26,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -44,6 +47,52 @@ public class MapsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
+        BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation);
+        mybottomNavView.setSelectedItemId(R.id.map);
+        mybottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId()  == R.id.home ) {
+                    startActivity(new Intent(getApplicationContext(),Main.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                }else if (item.getItemId()  == R.id.libro ) {
+                    startActivity(new Intent(getApplicationContext(),Info.class));
+                    overridePendingTransition(0,0);
+                    return true;
+
+                } else if (item.getItemId()  == R.id.map ) {
+
+                    return true;
+                } else if (item.getItemId()  == R.id.user ) {
+                    startActivity(new Intent(getApplicationContext(),User.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                }
+
+               /* switch (item.getItemId()){
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),Main.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.libro:
+                        startActivity(new Intent(getApplicationContext(), Info.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                    case R.id.map:
+
+                        return true;
+
+                    case R.id.user:
+                        startActivity(new Intent(getApplicationContext(), User.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }*/
+                return false;
+            }
+        });
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         getLastLocation();
         // in below line we are initializing our array list.

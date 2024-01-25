@@ -3,39 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/likes"
-        android:title="Likes"
-        android:icon="@drawable/like"
+        android:id="@+id/home"
+        android:icon="@drawable/home"
         android:contentDescription="none"
         app:showAsAction="always"
-        >
+        android:title="Home">
     </item>
 
     <item
-        android:id="@+id/add"
-        android:title="Add"
-        android:icon="@drawable/add"
+        android:id="@+id/libro"
+        android:icon="@drawable/libro"
         android:contentDescription="none"
         app:showAsAction="always"
-        >
+        android:title="Libro">
     </item>
 
     <item
-        android:id="@+id/browse"
-        android:title="Browse"
-        android:icon="@drawable/browse"
+        android:id="@+id/map"
+        android:icon="@drawable/map"
         android:contentDescription="none"
         app:showAsAction="always"
-        >
+        android:title="Mapa">
     </item>
 
     <item
-        android:id="@+id/personal"
-        android:title="Personal"
-        android:icon="@drawable/cuenta"
+        android:id="@+id/user"
+        android:icon="@drawable/user"
         android:contentDescription="none"
         app:showAsAction="always"
-        >
+        android:title="Usuario">
     </item>
 
 
