@@ -43,5 +43,6 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
     //Implementar el swiper para refrescar paginas
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("com.airbnb.android:lottie:4.2.0")
 
 }

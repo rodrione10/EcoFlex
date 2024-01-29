@@ -26,9 +26,9 @@ public class Splash extends AppCompatActivity {
         ImageView logo;
         logo = (ImageView)findViewById(R.id.logo);
         ImageView cargar;
-        cargar = (ImageView) findViewById(R.id.cargar);
+        //cargar = (ImageView) findViewById(R.id.cargar);
         Animation rotate = AnimationUtils.loadAnimation(this,R.anim.girar);
-        cargar.startAnimation(rotate);
+        //cargar.startAnimation(rotate);
 
         Glide.with(this)
                 .load(R.drawable.logo)
@@ -46,6 +46,6 @@ public class Splash extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
-        }, 3000);
+        }, 6000);
     }
 }

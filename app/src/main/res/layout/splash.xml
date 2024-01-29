@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".Splash">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/splas_anim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        >
+
+    </com.airbnb.lottie.LottieAnimationView>
     <ImageView
         android:id="@+id/logo"
         android:layout_width="400dp"
@@ -15,7 +29,7 @@
         android:layout_marginTop="50dp">
 
     </ImageView>
-
+    <!--
     <ImageView android:id="@+id/cargar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,4 +40,5 @@
         android:src="@drawable/cargar">
 
     </ImageView>
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
