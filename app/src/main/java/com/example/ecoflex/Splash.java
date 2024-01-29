@@ -23,18 +23,20 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.splash);
         openApp();
 
-        ImageView logo;
-        logo = (ImageView)findViewById(R.id.logo);
+        //ImageView logo;
+        //logo = (ImageView)findViewById(R.id.logo);
         ImageView cargar;
         //cargar = (ImageView) findViewById(R.id.cargar);
         Animation rotate = AnimationUtils.loadAnimation(this,R.anim.girar);
         //cargar.startAnimation(rotate);
 
-        Glide.with(this)
+        /*Glide.with(this)
                 .load(R.drawable.logo)
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(logo);
+
+         */
     }
     private void openApp() { //Para que se abra el splash con efecto
         Handler handler = new Handler();
