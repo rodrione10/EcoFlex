@@ -21,5 +21,10 @@ y da paso al login o al register --**
 
 ![Mapa](app/img/Mapa.png)
 
+**-- Prototipo de figma --**
+
+![Figma](app/img/Figma.png)
+
+[https://www.figma.com/file/Hs1c2JEgb0nRVc81rf8SLr/EcoFlex-APP?type=design&node-id=0-1&mode=design&t=5joEtoOEDQzm9uoK-0](https://www.figma.com/file/Hs1c2JEgb0nRVc81rf8SLr/EcoFlex-APP?type=design&node-id=0-1&mode=design&t=5joEtoOEDQzm9uoK-0)
 
 
