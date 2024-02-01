@@ -32,15 +32,18 @@ public class Main extends AppCompatActivity {
                 }else if (item.getItemId()  == R.id.libro ) {
                     startActivity(new Intent(getApplicationContext(),Info.class));
                     overridePendingTransition(0,0);
+                    Toast.makeText(Main.this, "Artículos sobre reciclaje", Toast.LENGTH_SHORT).show();
                     return true;
 
                 } else if (item.getItemId()  == R.id.map ) {
                     startActivity(new Intent(getApplicationContext(),MapsActivity.class));
                     overridePendingTransition(0,0);
+                    Toast.makeText(Main.this, "Mapa con puntos limpios", Toast.LENGTH_SHORT).show();
                     return true;
                 } else if (item.getItemId()  == R.id.user ) {
                     startActivity(new Intent(getApplicationContext(),User.class));
                     overridePendingTransition(0,0);
+                    Toast.makeText(Main.this, "Tu perfil", Toast.LENGTH_SHORT).show();
                     return true;
                 }
 
