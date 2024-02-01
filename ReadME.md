@@ -17,3 +17,9 @@ y da paso al login o al register --**
 
 ![Main](app/img/Main.png)
 
+**-- El mapa donde enseña los puntos limpios --**
+
+![Mapa](app/img/Mapa.png)
+
+
+

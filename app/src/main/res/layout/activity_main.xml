@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Main">
-    >
 
 
 
@@ -21,6 +20,10 @@
         android:layout_alignParentBottom="true"
         />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
     <ImageView android:id="@+id/imagenmain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,7 +45,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tarjeta"
         android:textSize="25dp">
-
 
     </TextView>
 
@@ -283,6 +285,5 @@
         </Button>
 
     </androidx.cardview.widget.CardView>
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
