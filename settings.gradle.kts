@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EcoFLex"
+rootProject.name = "EcoFlex"
 include(":app")
- 

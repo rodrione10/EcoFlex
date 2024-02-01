@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        android:title="Home">
+    </item>
+
+    <item
+        android:id="@+id/libro"
+        android:icon="@drawable/libro"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        android:title="Libro">
+    </item>
+
+    <item
+        android:id="@+id/map"
+        android:icon="@drawable/map"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        android:title="Mapa">
+    </item>
+
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/user"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        android:title="Usuario">
+    </item>
+
+
+
+</menu>
