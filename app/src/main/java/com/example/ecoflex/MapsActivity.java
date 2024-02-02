@@ -100,10 +100,24 @@ public class MapsActivity extends AppCompatActivity {
         getLastLocation();
         // in below line we are initializing our array list.
         locationArrayList = new ArrayList<>();
-        locationArrayList.add(new LatLng(-34, 151));
-        locationArrayList.add(new LatLng(-31.083332, 150.916672));
-        locationArrayList.add(new LatLng(-32.916668, 151.750000));
-        locationArrayList.add(new LatLng(-27.470125, 153.021072));
+        locationArrayList.add(new LatLng(40.392986, -3.698626));
+        locationArrayList.add(new LatLng(40.397053, -3.714228));
+        locationArrayList.add(new LatLng(40.394233, -3.683357));
+        locationArrayList.add(new LatLng(40.401058, -3.704488));
+        locationArrayList.add(new LatLng(40.402380, -3.679590));
+        locationArrayList.add(new LatLng(40.405424, -3.693377));
+        locationArrayList.add(new LatLng(40.407122, -3.704004));
+        locationArrayList.add(new LatLng(40.410635, -3.719507));
+        locationArrayList.add(new LatLng(40.409535, -3.696160));
+        locationArrayList.add(new LatLng(40.411463, -3.710095));
+        locationArrayList.add(new LatLng(40.403870, -3.672536));
+        locationArrayList.add(new LatLng(40.415351, -3.700304));
+        locationArrayList.add(new LatLng(40.416540, -3.676394));
+        locationArrayList.add(new LatLng(40.423199, -3.668783));
+        locationArrayList.add(new LatLng(40.440923, -3.622996));
+        locationArrayList.add(new LatLng(40.458799, -3.666623));
+        locationArrayList.add(new LatLng(40.451623, -3.740412));
+
 
 
 
@@ -143,18 +157,28 @@ public class MapsActivity extends AppCompatActivity {
                 // inside that we are drawing marker on our map.
                 for (int i = 0; i < locationArrayList.size(); i++) {
                     // below line is use to add marker to each location of our array list.
-                    mMap.addMarker(new MarkerOptions().position(locationArrayList.get(i)).title("Marker"));
+                    mMap.addMarker(new MarkerOptions().position(locationArrayList.get(i)).title("Punto Limpio"));
 
                     // below line is use to zoom our camera on map.
-                    mMap.animateCamera(CameraUpdateFactory.zoomTo(18.0f));
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(900));
 
                     // below line is use to move our camera to the specific location.
-                    mMap.moveCamera(CameraUpdateFactory.newLatLng(locationArrayList.get(i)));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Mine));
                 }
 
                 // Now, add the marker for the current location (Mine)
                 if (Mine != null) {
-                    mMap.addMarker(new MarkerOptions().position(Mine).title("My Location"));
+                    mMap.addMarker(new MarkerOptions().position(Mine).title("My Location").icon(BitmapFromVector(
+                            getApplicationContext(),
+                            R.drawable.mylocation)));
+
+                    // below line is use to move our camera to the specific location.
+                    mMap.moveCamera(CameraUpdateFactory.newLatLng(Mine));
+
+                    // below line is use to zoom our camera on map.
+                    mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
+
+
                 } else {
                     // Handle the case where Mine is null
                     Toast.makeText(MapsActivity.this, "Current location not available", Toast.LENGTH_SHORT).show();
