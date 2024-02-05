@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ecoflex"
+    namespace = "com.rojaja.ecoflex"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.ecoflex"
+        applicationId = "com.rojaja.ecoflex"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
