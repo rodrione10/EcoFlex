@@ -7,10 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class User extends AppCompatActivity {
+    private Button modoClaroOscuroButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +26,30 @@ public class User extends AppCompatActivity {
         setContentView(R.layout.activity_user);
         BottomNavigationView mybottomNavView = findViewById(R.id.bottom_navigation);
         mybottomNavView.setSelectedItemId(R.id.user);
+
+
+
+
+
+
+            modoClaroOscuroButton = findViewById(R.id.button3);
+
+            modoClaroOscuroButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Verifica el modo actual
+                    int modoActual = AppCompatDelegate.getDefaultNightMode();
+                    // Cambia al modo opuesto
+                    if (modoActual == AppCompatDelegate.MODE_NIGHT_YES) {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    } else {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    }
+                    // Recrea la actividad para aplicar el nuevo modo
+                    recreate();
+                }
+            });
+
         mybottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -68,4 +100,5 @@ public class User extends AppCompatActivity {
             }
         });
     }
+
 }
