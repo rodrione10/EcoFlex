@@ -58,7 +58,7 @@
     <EditText android:id="@+id/usuario1"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="Nombre de Usuario"
+        android:hint="E-mail"
         app:layout_constraintTop_toBottomOf="@+id/texto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
