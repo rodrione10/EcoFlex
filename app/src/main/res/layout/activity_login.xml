@@ -110,8 +110,7 @@
     android:textColor="@color/black"
     android:backgroundTint="@color/verde1"
     style="@style/TextAppearance.Poppins"
-    android:textStyle="bold"
-    android:onClick="openMain">
+    android:textStyle="bold">
     </Button>
 
     <Button
