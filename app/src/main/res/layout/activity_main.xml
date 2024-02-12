@@ -35,10 +35,10 @@
     </ImageView>
 
     <TextView
+        android:id="@+id/nomusuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextAppearance.Poppins"
-        android:text="Bienvenido @username"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/imagenmain"
         app:layout_constraintStart_toStartOf="parent"

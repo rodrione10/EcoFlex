@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,13 +20,16 @@ public class Main extends AppCompatActivity {
 
 
     private MenuItem prevMenuItem;
-
+    private TextView nombre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        nombre = findViewById(R.id.nomusuario);
+        String valor = getIntent().getStringExtra("USUARIO");
+        nombre.setText("Bienvenido "+valor);
 
         EditText contadorp = findViewById(R.id.contadorp);
         Button masp = findViewById(R.id.masp);
@@ -146,6 +150,7 @@ public class Main extends AppCompatActivity {
                 contadorp.setText(String.valueOf(valorActualP));
             }
         });
+
         maso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
