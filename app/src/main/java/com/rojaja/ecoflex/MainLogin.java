@@ -29,9 +29,13 @@ public class MainLogin extends AppCompatActivity {
     public void openLogin(View v){
         Intent intent = new Intent(MainLogin.this,Login.class);
         startActivity(intent);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
     }
     public void openRegister(View v){
         Intent intent = new Intent(MainLogin.this, Register.class);
         startActivity(intent);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
     }
 }
