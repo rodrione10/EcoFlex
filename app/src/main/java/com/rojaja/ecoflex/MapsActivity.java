@@ -55,12 +55,12 @@ public class MapsActivity extends AppCompatActivity {
                 if (item.getItemId()  == R.id.home ) {
                     startActivity(new Intent(getApplicationContext(),Main.class));
                     overridePendingTransition(0,0);
-                    Toast.makeText(MapsActivity.this, "Página principal", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MapsActivity.this, "Página principal", Toast.LENGTH_SHORT).show();
                     return true;
                 }else if (item.getItemId()  == R.id.libro ) {
                     startActivity(new Intent(getApplicationContext(),Info.class));
                     overridePendingTransition(0,0);
-                    Toast.makeText(MapsActivity.this, "Artículos sobre reciclaje", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MapsActivity.this, "Artículos sobre reciclaje", Toast.LENGTH_SHORT).show();
                     return true;
 
                 } else if (item.getItemId()  == R.id.map ) {
@@ -69,7 +69,7 @@ public class MapsActivity extends AppCompatActivity {
                 } else if (item.getItemId()  == R.id.user ) {
                     startActivity(new Intent(getApplicationContext(),User.class));
                     overridePendingTransition(0,0);
-                    Toast.makeText(MapsActivity.this, "Tu perfil", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(MapsActivity.this, "Tu perfil", Toast.LENGTH_SHORT).show();
                     return true;
                 }
 
