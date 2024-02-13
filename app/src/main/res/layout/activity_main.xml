@@ -35,10 +35,10 @@
     </ImageView>
 
     <TextView
+        android:id="@+id/nomusuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextAppearance.Poppins"
-        android:text="Bienvenido @username"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/imagenmain"
         app:layout_constraintStart_toStartOf="parent"
@@ -249,6 +249,7 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3">
     <Button
+        android:id="@+id/busqueda"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/verde3"
@@ -280,6 +281,7 @@
             style="@style/TextAppearance.Poppins"
             android:textStyle="bold"
             android:gravity="center"
+            android:onClick="openBusqueda"
             >
         </Button>
 

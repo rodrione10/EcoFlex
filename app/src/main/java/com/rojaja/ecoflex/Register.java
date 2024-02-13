@@ -45,6 +45,16 @@ public class Register extends AppCompatActivity {
                  String emailUser = email.getText().toString().trim();
                  String passUser = contrasena.getText().toString().trim();
 
+                 Bundle extras = new Bundle();
+
+                 extras.putString("USUARIO",nameUser); // se obtiene el valor mediante getString(...)
+
+                 Intent intent = new Intent(Register.this, Main.class);
+                    //Agrega el objeto bundle a el Intne
+                 intent.putExtras(extras);
+                    //Inicia Activity
+                 startActivity(intent);
+
                  if(nameUser.isEmpty() && emailUser.isEmpty() && passUser.isEmpty()){
                      Toast.makeText(Register.this, "Completa todos los campos",Toast.LENGTH_SHORT).show();
                  }else{

@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,13 +20,18 @@ public class Main extends AppCompatActivity {
 
 
     private MenuItem prevMenuItem;
-
+    private TextView nombre;
+    private Button busqueda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        busqueda=findViewById(R.id.busqueda);
 
+        nombre = findViewById(R.id.nomusuario);
+        String valor = getIntent().getStringExtra("USUARIO");
+        nombre.setText("Bienvenido "+valor);
 
         EditText contadorp = findViewById(R.id.contadorp);
         Button masp = findViewById(R.id.masp);
@@ -146,6 +152,7 @@ public class Main extends AppCompatActivity {
                 contadorp.setText(String.valueOf(valorActualP));
             }
         });
+
         maso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -273,5 +280,9 @@ public class Main extends AppCompatActivity {
             }
         });
 
+    }
+    public void openBusqueda(View v){
+        Intent intent = new Intent(Main.this,Products.class);
+        startActivity(intent);
     }
 }
