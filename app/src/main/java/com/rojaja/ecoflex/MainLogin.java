@@ -28,6 +28,8 @@ public class MainLogin extends AppCompatActivity {
     }
     public void openLogin(View v){
         Intent intent = new Intent(MainLogin.this,Login.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
     public void openRegister(View v){
