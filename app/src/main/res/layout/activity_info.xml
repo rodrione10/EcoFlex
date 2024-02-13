@@ -17,4 +17,26 @@
         app:itemIconTint="@drawable/selector"
         android:layout_alignParentBottom="true"
         />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView android:id="@+id/imageneducacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/Educacion"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp">
+        </ImageView>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
