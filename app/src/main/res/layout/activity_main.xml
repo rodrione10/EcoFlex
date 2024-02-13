@@ -255,8 +255,7 @@
         android:text="Una tonelada de basura reciclada"
         android:textColor="@color/black"
         style="@style/TextAppearance.Poppins"
-        android:textStyle="bold"
-        >
+        android:textStyle="bold">
     </Button>
 
     </androidx.cardview.widget.CardView>
