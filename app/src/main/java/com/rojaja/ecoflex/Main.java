@@ -21,11 +21,13 @@ public class Main extends AppCompatActivity {
 
     private MenuItem prevMenuItem;
     private TextView nombre;
+    private Button busqueda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        busqueda=findViewById(R.id.busqueda);
 
         nombre = findViewById(R.id.nomusuario);
         String valor = getIntent().getStringExtra("USUARIO");
@@ -278,5 +280,9 @@ public class Main extends AppCompatActivity {
             }
         });
 
+    }
+    public void openBusqueda(View v){
+        Intent intent = new Intent(Main.this,Products.class);
+        startActivity(intent);
     }
 }

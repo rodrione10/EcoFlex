@@ -249,6 +249,7 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3">
     <Button
+        android:id="@+id/busqueda"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/verde3"
@@ -281,6 +282,7 @@
             style="@style/TextAppearance.Poppins"
             android:textStyle="bold"
             android:gravity="center"
+            android:onClick="openBusqueda"
             >
         </Button>
 
