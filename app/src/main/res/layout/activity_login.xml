@@ -97,6 +97,18 @@
        />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/olvide_contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="He olvidado mi contraseña"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="resetPassword"/>
+
     <Button
     android:id="@+id/iniciar_sesion"
     android:layout_width="300dp"
