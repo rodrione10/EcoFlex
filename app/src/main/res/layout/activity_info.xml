@@ -22,12 +22,27 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="50dp">
         </ImageView>
+        <TextView
+            android:id="@+id/nomusuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"
+            android:textStyle="bold"
+            android:text="Sección Educativa"
+            app:layout_constraintTop_toBottomOf="@+id/imageninfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/boton1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:textSize="25dp">
+
+        </TextView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/boton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/imageninfo"
+            app:layout_constraintTop_toBottomOf="@+id/nomusuario"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="40dp"
@@ -81,5 +96,6 @@
         app:itemBackground="@color/white"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        />
 </RelativeLayout>
