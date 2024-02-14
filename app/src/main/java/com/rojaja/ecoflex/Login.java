@@ -1,5 +1,6 @@
 package com.rojaja.ecoflex;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +9,18 @@ import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.style.UnderlineSpan;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,17 +28,66 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
+    private Button botoniniciar;
+
+    private EditText email,password;
+    private FirebaseAuth mAuth;
+
     private EditText usuario1; // Campo de texto para el usuario
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mAuth = FirebaseAuth.getInstance();
+        email = findViewById(R.id.usuario1);
+        password = findViewById(R.id.password1);
+        botoniniciar = findViewById(R.id.iniciar_sesion);
 
         // Referencia al campo de texto usuario1
         usuario1 = findViewById(R.id.usuario1);
 
         ImageView imagen;
+        imagen = (ImageView) findViewById(R.id.imagen);
+
+        botoniniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String emailUser = email.getText().toString().trim();
+                String passUser = password.getText().toString().trim();
+
+                if (emailUser.isEmpty() && passUser.isEmpty()) {
+                    Toast.makeText(Login.this, "Ingresa los datos", Toast.LENGTH_SHORT).show();
+
+                } else {
+                    loginUser(emailUser, passUser);
+                }
+
+
+            }
+
+            private void loginUser(String emailUser, String passUser) {
+                mAuth.signInWithEmailAndPassword(emailUser,passUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            finish();
+                            startActivity(new Intent(Login.this, Main.class));
+                            Toast.makeText(Login.this, "Bienvenido", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(Login.this, "Error", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Login.this, "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
+
+
         imagen = findViewById(R.id.imagen);
 
         TextView olvideContraseñaTextView = findViewById(R.id.olvide_contraseña);
@@ -60,6 +120,7 @@ public class Login extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
+    //Esto abre el register desde el iniciar sesion no tocar
 
     public void openRegister(View v){
         Intent intent = new Intent(Login.this, Register.class);
@@ -67,6 +128,7 @@ public class Login extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
+
 
     public void resetPassword(View view) {
         String email = usuario1.getText().toString().trim(); // Obtener el correo electrónico del campo de texto
