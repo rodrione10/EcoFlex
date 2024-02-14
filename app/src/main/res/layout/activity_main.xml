@@ -40,6 +40,7 @@
         android:layout_height="wrap_content"
         style="@style/TextAppearance.Poppins"
         android:textStyle="bold"
+        android:text="Bienvenido @username"
         app:layout_constraintTop_toBottomOf="@+id/imagenmain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +245,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3">
@@ -256,35 +257,12 @@
         android:text="Una tonelada de basura reciclada"
         android:textColor="@color/black"
         style="@style/TextAppearance.Poppins"
-        android:textStyle="bold">
+        android:textStyle="bold"
+        android:onClick="openBusqueda">
     </Button>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/boton1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
-        android:backgroundTint="@color/verde3">
-        <Button
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/verde3"
-            android:text="Una tonelada de basura reciclada"
-            android:textColor="@color/black"
-            style="@style/TextAppearance.Poppins"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:onClick="openBusqueda"
-            >
-        </Button>
 
-    </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
