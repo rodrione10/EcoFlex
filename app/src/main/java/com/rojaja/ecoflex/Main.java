@@ -15,12 +15,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.squareup.picasso.Picasso;
+
 public class Main extends AppCompatActivity {
 
 
     private MenuItem prevMenuItem;
-    private TextView nombre;
+    private TextView nombreuser;
     private Button busqueda;
 
     @Override
@@ -29,9 +39,37 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         busqueda=findViewById(R.id.busqueda);
 
-        nombre = findViewById(R.id.nomusuario);
-        String valor = getIntent().getStringExtra("USUARIO");
-        nombre.setText("Bienvenido "+valor);
+        nombreuser = findViewById(R.id.nomusuario);
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            String userId = currentUser.getUid();
+
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("user")
+                    .document(userId)
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            if (documentSnapshot.exists()) {
+                                String nombre = documentSnapshot.getString("name");
+                                nombreuser.setText("Bienvenido: " + nombre);
+                            } else {
+                                Toast.makeText(Main.this, "No se encontró el usuario", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(Main.this, "Error al obtener el usuario", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } else {
+            Toast.makeText(Main.this, "Usuario no autenticado", Toast.LENGTH_SHORT).show();
+        }
 
         EditText contadorp = findViewById(R.id.contadorp);
         Button masp = findViewById(R.id.masp);

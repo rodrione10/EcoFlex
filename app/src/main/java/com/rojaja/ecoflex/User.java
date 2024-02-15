@@ -4,20 +4,27 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class User extends AppCompatActivity {
 
     private Button modoClaroOscuroButton;
     private Button cerrarSesionButton;
     private FirebaseAuth mAuth;
+    private TextView nombreuser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,36 @@ public class User extends AppCompatActivity {
         setContentView(R.layout.activity_user);
 
         mAuth = FirebaseAuth.getInstance();
+        nombreuser = findViewById(R.id.usernameText);
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            String userId = currentUser.getUid();
+
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("user")
+                    .document(userId)
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                        @Override
+                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+                            if (documentSnapshot.exists()) {
+                                String nombre = documentSnapshot.getString("name");
+                                nombreuser.setText(nombre);
+                            } else {
+                                Toast.makeText(User.this, "No se encontró el usuario", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(User.this, "Error al obtener el usuario", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } else {
+            Toast.makeText(User.this, "Usuario no autenticado", Toast.LENGTH_SHORT).show();
+        }
 
         modoClaroOscuroButton = findViewById(R.id.button3);
         cerrarSesionButton = findViewById(R.id.button4);

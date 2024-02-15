@@ -31,7 +31,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/usernameTextView"
+        android:id="@+id/usernameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/EcoFlex"
@@ -47,7 +47,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Cambiar correo"
-        android:layout_below="@id/usernameTextView"
+        android:layout_below="@id/usernameText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/verde2"
