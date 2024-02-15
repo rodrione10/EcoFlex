@@ -104,7 +104,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="He olvidado mi contraseña"
-        android:textColor="@color/black"
         android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintStart_toStartOf="parent"
