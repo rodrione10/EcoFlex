@@ -10,9 +10,11 @@
         android:id="@+id/barra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:queryHint="Busca aqui el producto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imagenprod"
         android:layout_width="wrap_content"
@@ -20,13 +22,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barra"/>
+    <androidx.cardview.widget.CardView android:id="@+id/nombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="@color/verde3"
+        app:layout_constraintTop_toBottomOf="@+id/imagenprod">
     <TextView
         android:id="@+id/nombreprod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenprod" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenprod"
+        />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/reciclar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="@color/verde3"
+        app:layout_constraintTop_toBottomOf="@+id/nombre">
     <TextView
         android:id="@+id/reciclarprod"
         android:layout_width="wrap_content"
@@ -34,6 +60,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreprod" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/huella"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="@color/verde3"
+        app:layout_constraintTop_toBottomOf="@+id/reciclar">
     <TextView
         android:id="@+id/huellaprod"
         android:layout_width="wrap_content"
@@ -41,6 +79,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reciclarprod" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@+id/impacto"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        android:backgroundTint="@color/verde3"
+        app:layout_constraintTop_toBottomOf="@+id/huella">
     <TextView
         android:id="@+id/impactoprod"
         android:layout_width="wrap_content"
@@ -48,4 +98,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/huellaprod" />
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

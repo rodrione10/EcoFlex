@@ -71,19 +71,19 @@ public class Main extends AppCompatActivity {
             Toast.makeText(Main.this, "Usuario no autenticado", Toast.LENGTH_SHORT).show();
         }
 
-        EditText contadorp = findViewById(R.id.contadorp);
+        TextView contadorp = findViewById(R.id.contadorp);
         Button masp = findViewById(R.id.masp);
         Button menosp = findViewById(R.id.menosp);
 
-        EditText contadoro = findViewById(R.id.contadoro);
+        TextView contadoro = findViewById(R.id.contadoro);
         Button maso = findViewById(R.id.maso);
         Button menoso = findViewById(R.id.menoso);
 
-        EditText contadorv = findViewById(R.id.contadorv);
+        TextView contadorv = findViewById(R.id.contadorv);
         Button masv = findViewById(R.id.masv);
         Button menosv = findViewById(R.id.menosv);
 
-        EditText contadorc = findViewById(R.id.contadorc);
+        TextView contadorc = findViewById(R.id.contadorc);
         Button masc = findViewById(R.id.masc);
         Button menosc = findViewById(R.id.menosc);
 
