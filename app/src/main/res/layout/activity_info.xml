@@ -81,7 +81,8 @@
                 android:textColor="@color/black"
                 style="@style/TextAppearance.Poppins"
                 android:textStyle="bold"
-                android:gravity="center">
+                android:gravity="center"
+                android:onClick="openNoticia">
             </Button>
 
         </androidx.cardview.widget.CardView>

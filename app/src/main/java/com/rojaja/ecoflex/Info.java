@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -77,5 +78,14 @@ public class Info extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_EDUCACION);
             }
         });
+    }
+    public void openNoticia(View view) {
+        String url = "https://elpais.com/noticias/medio-ambiente/#";
+
+        // Crear un Intent para abrir una URL en el navegador
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+
     }
 }
