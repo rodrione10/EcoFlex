@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">EcoFLex</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="consejos_reciclaje">Consejos para reciclar</string>
+    <string name="main_login_info">Recicla de manera efectiva y encuentra puntos de reciclaje cercanos</string>
+    <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="registrarse_boton">Registrarme</string>
 
 </resources>

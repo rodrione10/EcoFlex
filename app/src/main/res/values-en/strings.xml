@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EcoFLex</string>
+    <string name="main_login_info">Recycle effectively and find nearby recycling points</string>
+    <string name="consejos_reciclaje">Tips for recycling</string>
+    <string name="iniciar_sesion">Log In</string>
+    <string name="registrarse_boton">Register</string>
+</resources>
