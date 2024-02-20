@@ -50,11 +50,11 @@
             app:cardElevation="8dp"
             android:backgroundTint="@color/verde3">
 
-            <Button
+            <Button android:id="@+id/educacion"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde3"
-                android:text="Una tonelada de basura reciclada"
+                android:text="¿Cómo recliclar?"
                 android:textColor="@color/black"
                 style="@style/TextAppearance.Poppins"
                 android:textStyle="bold">
@@ -73,11 +73,11 @@
             app:cardElevation="8dp"
             android:backgroundTint="@color/verde3">
 
-            <Button
+            <Button android:id="@+id/noticia"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde3"
-                android:text="Una tonelada de basura reciclada"
+                android:text="Noticia del mes"
                 android:textColor="@color/black"
                 style="@style/TextAppearance.Poppins"
                 android:textStyle="bold"
