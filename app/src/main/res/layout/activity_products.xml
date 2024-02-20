@@ -19,32 +19,41 @@
         android:id="@+id/imagenprod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/barra"/>
-    <androidx.cardview.widget.CardView android:id="@+id/nombre"
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nombre"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="70dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/verde3"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
-        android:backgroundTint="@color/verde3"
-        app:layout_constraintTop_toBottomOf="@+id/imagenprod">
-    <TextView
-        android:id="@+id/nombreprod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenprod"
-        />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nombreprod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imagenprod"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/TextAppearance.Poppins"
+            />
     </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView android:id="@+id/reciclar"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/reciclar"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,17 +62,23 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3"
         app:layout_constraintTop_toBottomOf="@+id/nombre">
-    <TextView
-        android:id="@+id/reciclarprod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreprod" />
+
+        <TextView
+            android:id="@+id/reciclarprod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombreprod"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/TextAppearance.Poppins"/>
     </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView android:id="@+id/huella"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/huella"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,17 +87,23 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3"
         app:layout_constraintTop_toBottomOf="@+id/reciclar">
-    <TextView
-        android:id="@+id/huellaprod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reciclarprod" />
+
+        <TextView
+            android:id="@+id/huellaprod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reciclarprod"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/TextAppearance.Poppins"/>
     </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView android:id="@+id/impacto"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/impacto"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,12 +112,17 @@
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3"
         app:layout_constraintTop_toBottomOf="@+id/huella">
-    <TextView
-        android:id="@+id/impactoprod"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/huellaprod" />
+
+        <TextView
+            android:id="@+id/impactoprod"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/huellaprod"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            style="@style/TextAppearance.Poppins"/>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package com.rojaja.ecoflex;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,7 @@ public class User extends AppCompatActivity {
     private Button cerrarSesionButton;
     private FirebaseAuth mAuth;
     private TextView nombreuser;
-
+    private String correo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,7 @@ public class User extends AppCompatActivity {
                             if (documentSnapshot.exists()) {
                                 String nombre = documentSnapshot.getString("name");
                                 nombreuser.setText(nombre);
+                                correo = documentSnapshot.getString("email");
                             } else {
                                 Toast.makeText(User.this, "No se encontró el usuario", Toast.LENGTH_SHORT).show();
                             }
@@ -118,7 +120,24 @@ public class User extends AppCompatActivity {
                 });
             }
 
+    public void resetPassword(View view) {
+        String email =correo; // Obtener el correo electrónico del campo de texto
 
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Por favor ingresa tu correo electrónico registrado", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Enviar un correo electrónico de restablecimiento de contraseña a la dirección de correo electrónico proporcionada
+        FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(User.this, "Se ha enviado un correo electrónico para restablecer tu contraseña", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(User.this, "Falló el envío del correo electrónico de restablecimiento de contraseña", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
 
     private void cerrarSesion() {
         mAuth.signOut();
