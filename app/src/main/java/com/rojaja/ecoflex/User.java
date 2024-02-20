@@ -1,7 +1,11 @@
 package com.rojaja.ecoflex;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.style.UnderlineSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -118,6 +122,20 @@ public class User extends AppCompatActivity {
                         cerrarSesion();
                     }
                 });
+
+        TextView politicaTextView = findViewById(R.id.politica);
+
+        // Crear una cadena con el texto del enlace
+        String texto = "Terminos y condiciones, política de privacidad";
+
+        // Crear un SpannableString para aplicar el subrayado al texto
+        SpannableString spannableString = new SpannableString(texto);
+
+        // Aplicar el subrayado al texto
+        spannableString.setSpan(new UnderlineSpan(), 0, texto.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        // Establecer el texto subrayado en el TextView
+        politicaTextView.setText(spannableString);
             }
 
     public void resetPassword(View view) {
@@ -147,4 +165,14 @@ public class User extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void openPolitica(View view) {
+        String url = "https://docs.google.com/document/d/1KyOMbxWitalIkQoWgxBZtprIiWW4q7lCiSEuQsQyxeM/edit";
+
+        // Crear un Intent para abrir una URL en el navegador
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+
+    }
 }
+

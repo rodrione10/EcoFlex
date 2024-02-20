@@ -48,7 +48,7 @@
     <Button
         android:id="@+id/button2"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Cambiar contraseña"
         android:layout_below="@id/usernameText"
         android:layout_centerHorizontal="true"
@@ -63,7 +63,7 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Modo claro/oscuro"
         android:layout_below="@id/button2"
         android:layout_centerHorizontal="true"
@@ -77,7 +77,7 @@
     <Button
         android:id="@+id/button4"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="Cerrar sesion"
         android:layout_below="@id/button3"
         android:layout_centerHorizontal="true"
@@ -88,4 +88,27 @@
         style="@style/TextAppearance.Poppins"
         app:cornerRadius="0dp"/>
 
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About us: app desarrollada por Jaime Ramírez, Rodrigo Álvarez y Javier Alonso"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/button4"
+        android:onClick="resetPassword"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/politica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terminos y condiciones, política de privacidad"
+        android:layout_below="@id/about"
+        android:onClick="openPolitica"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
 </RelativeLayout>

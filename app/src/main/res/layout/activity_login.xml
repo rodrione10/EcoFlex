@@ -110,7 +110,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:onClick="resetPassword"
         style="@style/TextAppearance.Poppins"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        />
 
     <Button
     android:id="@+id/iniciar_sesion"
