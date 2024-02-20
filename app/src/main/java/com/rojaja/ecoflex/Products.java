@@ -32,6 +32,7 @@ public class Products extends AppCompatActivity {
         impactoprod=findViewById(R.id.impactoprod);
         reciclarprod=findViewById(R.id.reciclarprod);
         imagenprod = findViewById(R.id.imagenprod);
+        barra.setIconified(false);
 
         barra.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -65,9 +66,9 @@ public class Products extends AppCompatActivity {
                             String imagen = document.getString("imagen");
                             // Puedes mostrar el nombre del producto en tu interfaz de usuario
                             nombreprod.setText("Nombre: "+nombre);
-                            huellaprod.setText(huella);
-                            impactoprod.setText(impacto);
-                            reciclarprod.setText(reciclar);
+                            huellaprod.setText("C02 por cada 100g: "+huella);
+                            impactoprod.setText("Impacto mediambiental: "+impacto);
+                            reciclarprod.setText("Donde reciclar: "+reciclar);
                             Picasso.get().load(imagen).into(imagenprod);
                         }
                     }
