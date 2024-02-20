@@ -2,7 +2,6 @@
 <resources>
     <style name="TextAppearance.Poppins" parent="TextAppearance.AppCompat">
         <item name="fontFamily">@font/poppinsregular</item>
-
     </style>
 
 

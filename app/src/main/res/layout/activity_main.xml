@@ -115,8 +115,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="74dp"
             android:layout_marginLeft="104dp"
-            android:textStyle="bold"/>
-            <!--android:backgroundTint="@android:color/transparent"-->
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18dp"/>
+
 
         <Button android:id="@+id/maso"
             android:layout_width="wrap_content"
@@ -148,7 +150,8 @@
             android:layout_marginTop="104dp"
             android:layout_marginLeft="104dp"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/transparent">
+            android:textColor="@color/black"
+            android:textSize="18dp">
 
         </TextView>
         <Button android:id="@+id/masv"
@@ -180,7 +183,8 @@
             android:layout_marginTop="134dp"
             android:layout_marginLeft="104dp"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/transparent">
+            android:textColor="@color/black"
+            android:textSize="18dp">
 
         </TextView>
         <Button android:id="@+id/masc"
@@ -212,7 +216,8 @@
             android:layout_marginTop="164dp"
             android:layout_marginLeft="104dp"
             android:textStyle="bold"
-            android:backgroundTint="@android:color/transparent">
+            android:textColor="@color/black"
+            android:textSize="18dp">
 
         </TextView>
         <Button android:id="@+id/masp"

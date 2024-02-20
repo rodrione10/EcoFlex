@@ -5,6 +5,6 @@
         <item name="colorPrimary">@color/verde1</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:textColorPrimary">@color/black</item>
-        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColorSecondary">@color/verde4</item>
     </style>
 </resources>
