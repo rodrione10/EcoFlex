@@ -63,7 +63,7 @@
         <TextView android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Estos son tus datos de recliclaje:"
+            android:text="Estos son tus datos de reciclaje:"
             style="@style/TextAppearance.Poppins"
             android:textStyle="bold"
             android:textSize="20dp"
