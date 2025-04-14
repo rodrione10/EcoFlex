@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -23,10 +24,15 @@ import com.google.android.gms.maps.*;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
 
 import java.util.ArrayList;
 
@@ -97,7 +103,8 @@ public class MapsActivity extends AppCompatActivity {
             }
         });
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
-        getLastLocation();
+        //getLastLocation();
+        requestLocationUpdate();
         // in below line we are initializing our array list.
         locationArrayList = new ArrayList<>();
         locationArrayList.add(new LatLng(40.392986, -3.698626));
@@ -123,7 +130,7 @@ public class MapsActivity extends AppCompatActivity {
 
     }
 
-    private void getLastLocation() {
+    /*private void getLastLocation() {
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
@@ -142,7 +149,38 @@ public class MapsActivity extends AppCompatActivity {
             }
         });
 
+    }*/
+    private void requestLocationUpdate() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, FINE_PERMISSION_CODE);
+            return;
+        }
+
+        LocationRequest locationRequest = LocationRequest.create();
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        locationRequest.setInterval(5000); // cada 5 segundos
+        locationRequest.setFastestInterval(2000); // mínimo entre actualizaciones
+
+        fusedLocationProviderClient.requestLocationUpdates(locationRequest, new LocationCallback() {
+            @Override
+            public void onLocationResult(@NonNull LocationResult locationResult) {
+                super.onLocationResult(locationResult);
+                if (locationResult != null && locationResult.getLocations().size() > 0) {
+                    currentLocation = locationResult.getLastLocation();
+                    Mine = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+
+                    // Ya puedes iniciar el mapa con una ubicación real y precisa
+                    initMap();
+
+                    // Importante: detener futuras actualizaciones si solo necesitas una vez
+                    fusedLocationProviderClient.removeLocationUpdates(this);
+                }
+            }
+        }, getMainLooper());
     }
+
+
     private void initMap() {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapFragment);
@@ -183,6 +221,27 @@ public class MapsActivity extends AppCompatActivity {
                     // Handle the case where Mine is null
                     Toast.makeText(MapsActivity.this, "Current location not available", Toast.LENGTH_SHORT).show();
                 }
+                mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(@NonNull Marker marker) {
+                        // Evitar abrir ruta si es tu propia ubicación
+                        if (marker.getTitle() != null && marker.getTitle().startsWith("Punto Limpio")) {
+                            LatLng destino = marker.getPosition();
+                            String uri = "https://www.google.com/maps/dir/?api=1&destination=" +
+                                    destino.latitude + "," + destino.longitude + "&travelmode=walking";
+                            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                            intent.setPackage("com.google.android.apps.maps");
+
+                            if (intent.resolveActivity(getPackageManager()) != null) {
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(MapsActivity.this, "Google Maps no está instalado", Toast.LENGTH_SHORT).show();
+                            }
+                            return true;
+                        }
+                        return false;
+                    }
+                });
             }
         });
     }
@@ -192,7 +251,7 @@ public class MapsActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if(requestCode == FINE_PERMISSION_CODE){
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                getLastLocation();
+                //getLastLocation();
             }else{
                 Toast.makeText(this,"No has concedido la localizacion", Toast.LENGTH_SHORT).show();
             }
