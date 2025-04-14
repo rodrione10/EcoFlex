@@ -54,7 +54,7 @@
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/verde3"
-                android:text="¿Cómo recliclar?"
+                android:text="¿Cómo reciclar?"
                 android:textColor="@color/black"
                 style="@style/TextAppearance.Poppins"
                 android:textStyle="bold">

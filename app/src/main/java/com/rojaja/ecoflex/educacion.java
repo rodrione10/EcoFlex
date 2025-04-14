@@ -18,9 +18,10 @@ public class educacion extends AppCompatActivity {
             "https://www.recytrans.com/blog/como-se-recicla-el-papel-y-carton/",
             "https://www.leanpio.com/es/blog/separacion-residuos-organicos-inorganicos",
             "https://mejorconsalud.as.com/reutilizar-los-envases-de-plastico-se-acumulan-hogar/",
-            "https://www.reciclajeparatodo.com/",
+            "https://www.leonardo-gr.com/es/blog/gu-para-comprar-y-vender-materias-primas-recicladas/",
             "https://ecolec.es/greenblog/actualidad/bolsas-reutilizables-beneficios/",
             "https://www.sostenibilidad.com/vida-sostenible/desperdicio-de-comida-que-es-y-como-evitarlo/",
+
             // Agrega más URL según desees, asegúrate de que coincidan con los consejos
     };
     @Override
