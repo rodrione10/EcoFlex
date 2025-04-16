@@ -253,7 +253,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="30dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
         android:backgroundTint="@color/verde3">
@@ -270,6 +270,30 @@
     </Button>
 
     </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@+id/boton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tarjeta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:backgroundTint="@color/verde3">
+            <Button
+                android:id="@+id/huellacarbono"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/verde3"
+                android:text="CALCULADORA HUELLA DE CARBONO"
+                android:textColor="@color/black"
+                style="@style/TextAppearance.Poppins"
+                android:textStyle="bold"
+                android:onClick="openCalculadora">
+            </Button>
+
+        </androidx.cardview.widget.CardView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

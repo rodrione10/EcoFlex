@@ -323,4 +323,9 @@ public class Main extends AppCompatActivity {
         Intent intent = new Intent(Main.this,Products.class);
         startActivity(intent);
     }
+
+    public void openCalculadora(View v){
+        Intent intent = new Intent(Main.this,Calculadora.class);
+        startActivity(intent);
+    }
 }

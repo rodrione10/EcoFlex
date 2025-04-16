@@ -18,6 +18,9 @@
         android:theme="@style/Base.Theme.EcoFLex"
         tools:targetApi="31">
         <activity
+            android:name=".Calculadora"
+            android:exported="false" />
+        <activity
             android:name=".educacion"
             android:exported="false" />
         <activity
