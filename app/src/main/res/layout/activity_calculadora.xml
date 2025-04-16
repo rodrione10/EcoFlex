@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TRANSPORTE -->
+        <TextView android:text="¿Cuántos km manejas por semana?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/inputKmAuto"
+            android:inputType="number"
+            android:hint="Ej: 100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="Tipo de vehículo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spinnerTipoAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- ENERGÍA -->
+        <TextView android:text="Consumo mensual de electricidad (kWh)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/inputElectricidad"
+            android:inputType="number"
+            android:hint="Ej: 250"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- ALIMENTACIÓN -->
+        <TextView android:text="¿Cuántas veces por semana consumes carne roja?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/inputCarne"
+            android:inputType="number"
+            android:hint="Ej: 3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- BOTÓN -->
+        <Button
+            android:id="@+id/btnCalcular"
+            android:text="Calcular Huella"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/verde3"
+            android:textColor="@color/black"/>
+
+        <!-- RESULTADO -->
+        <TextView
+            android:id="@+id/textResultado"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</ScrollView>
