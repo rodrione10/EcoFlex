@@ -1,20 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/TextAppearance.Poppins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/verde3"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Calculadora de CO2"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
         <!-- TRANSPORTE -->
-        <TextView android:text="¿Cuántos km manejas por semana?"
+        <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="245dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/transporteimagen">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"
+            android:textStyle="bold"
+            android:text="Transporte"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="¿Cuántos km recorres por semana?" />
+
         <EditText
             android:id="@+id/inputKmAuto"
+            android:inputType="number"
+            android:hint="Ej: 100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="¿Cuántos litros consume tu coche?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/inputConsumoCoche"
             android:inputType="number"
             android:hint="Ej: 100"
             android:layout_width="match_parent"
@@ -27,47 +70,144 @@
             android:id="@+id/spinnerTipoAuto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="245dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/energiaimg">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"
+            android:textStyle="bold"
+            android:text="Energía"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp">
+        </TextView>
 
         <!-- ENERGÍA -->
         <TextView android:text="Consumo mensual de electricidad (kWh)"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
         <EditText
             android:id="@+id/inputElectricidad"
             android:inputType="number"
             android:hint="Ej: 250"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="245dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/alimentacionimg">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"
+            android:textStyle="bold"
+            android:text="Alimentación"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp">
+        </TextView>
 
         <!-- ALIMENTACIÓN -->
         <TextView android:text="¿Cuántas veces por semana consumes carne roja?"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
         <EditText
-            android:id="@+id/inputCarne"
+
+            android:id="@+id/inputCarneRoja"
             android:inputType="number"
             android:hint="Ej: 3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <!-- BOTÓN -->
-        <Button
-            android:id="@+id/btnCalcular"
-            android:text="Calcular Huella"
-            android:layout_marginTop="16dp"
+        <TextView android:text="¿Cuántas veces por semana consumes carne blanca?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/inputCarneBlanca"
+            android:inputType="number"
+            android:hint="Ej: 3"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView android:text="¿Cuántas veces por semana consumes lácteos?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/inputLacteos"
+            android:inputType="number"
+            android:hint="Ej: 3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="245dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/reciclajeimg">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"
+            android:textStyle="bold"
+            android:text="Residuos"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp">
+        </TextView>
+        <!--RESIDUOS-->
+        <TextView android:text="¿Cuántas bolsas de basura produces?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+        <EditText
+            android:id="@+id/inputBasura"
+            android:inputType="number"
+            android:hint="(Suponiendo que una bolsa es 1kg)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- BOTÓN -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/botonCalcular"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
             android:backgroundTint="@color/verde3"
-            android:textColor="@color/black"/>
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <Button
+                android:id="@+id/btnCalcular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:padding="16dp"
+                android:backgroundTint="@color/verde3"
+                android:text="CALCULAR HUELLA"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
 
         <!-- RESULTADO -->
         <TextView
             android:id="@+id/textResultado"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Resultado"
+            android:textAlignment="center"/>
 
     </LinearLayout>
 
