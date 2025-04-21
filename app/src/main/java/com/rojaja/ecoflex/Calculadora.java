@@ -69,9 +69,9 @@ public class Calculadora extends AppCompatActivity {
             double litrosPorSemana = (kmAuto * consumo) / 100.0;
             double emisionesAuto = litrosPorSemana * 52 * factorAuto;
             double emisionesElectricidad = electricidad * 12 * 0.5;
-            double emisionesCarneR = carneR * 52 * 1.0 * 27;  // promedio estimado 5kg CO2 por porción
-            double emisionesCarneB = carneB * 52 * 1.0 * 7;  // promedio estimado 5kg CO2 por porción
-            double emisionesLacteos = lacteos * 52 * 1.0 * 3;  // promedio estimado 5kg CO2 por porción
+            double emisionesCarneR = carneR * 52 * 27;  // promedio estimado 5kg CO2 por porción
+            double emisionesCarneB = carneB * 52 * 7;  // promedio estimado 5kg CO2 por porción
+            double emisionesLacteos = lacteos * 52 * 3;  // promedio estimado 5kg CO2 por porción
             double emisionesBasura = basura * 52 * 1.8;
 
             double total = emisionesAuto + emisionesElectricidad + emisionesCarneR+ emisionesCarneB + emisionesLacteos + emisionesBasura ;
