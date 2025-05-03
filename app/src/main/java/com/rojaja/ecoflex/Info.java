@@ -88,4 +88,8 @@ public class Info extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void openCuestionario(View v){
+        Intent intent = new Intent(Info.this,Cuestionario.class);
+        startActivity(intent);
+    }
 }

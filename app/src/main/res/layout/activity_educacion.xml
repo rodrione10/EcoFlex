@@ -15,7 +15,7 @@
         android:background="@color/verde3"
         android:gravity="center"
         android:padding="16dp"
-        android:text="Consejos para Reciclar"
+        android:text="Consejos para reciclar"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
