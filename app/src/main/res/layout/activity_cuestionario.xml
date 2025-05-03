@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            style="@style/TextAppearance.Poppins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/verde3"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Cuestionario de reciclaje"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="245dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/cuestionarioimg">
+        </ImageView>
+
+        <TextView
+            style="@style/TextAppearance.Poppins"
+            android:textStyle="bold"
+            android:id="@+id/questionText"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_marginBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"/>
+
+        <RadioGroup
+            android:id="@+id/optionsGroup"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="16dp">
+            <RadioButton android:id="@+id/option1" style="@style/TextAppearance.Poppins"   android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioButton android:id="@+id/option2" style="@style/TextAppearance.Poppins" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <RadioButton android:id="@+id/option3" style="@style/TextAppearance.Poppins" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <Button
+            android:textStyle="bold"
+            android:backgroundTint="@color/verde1"
+            android:textColor="@color/black"
+            android:id="@+id/nextButton"
+            android:text="Siguiente"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"/>
+
+        <TextView
+            android:id="@+id/resultText"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"/>
+
+        <Button
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/tipsButton"
+            android:text="Ver consejos de reciclaje"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Poppins"/>
+    </LinearLayout>
+</ScrollView>
