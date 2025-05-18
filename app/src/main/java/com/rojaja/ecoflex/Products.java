@@ -7,6 +7,7 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -97,10 +98,10 @@ public class Products extends AppCompatActivity {
                         for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                             String nombreItem = document.getString("nombre");
                             if (nombreItem != null && nombreItem.toLowerCase().startsWith(queryLowerCase)) {
-                                nombreprod.setText("Nombre: " + nombreItem);
-                                huellaprod.setText("C02 por cada 100g: " + document.getString("huella"));
-                                impactoprod.setText("Impacto mediambiental: " + document.getString("impacto"));
-                                reciclarprod.setText("Donde reciclar: " + document.getString("reciclar"));
+                                nombreprod.setText(nombreItem);
+                                huellaprod.setText(document.getString("huella"));
+                                impactoprod.setText( document.getString("impacto"));
+                                reciclarprod.setText(document.getString("reciclar"));
 
                                 String imagenUrl = document.getString("imagen");
                                 if (imagenUrl != null && !imagenUrl.isEmpty()) {
@@ -113,6 +114,10 @@ public class Products extends AppCompatActivity {
                                 huella.setVisibility(CardView.VISIBLE);
                                 impacto.setVisibility(CardView.VISIBLE);
                                 reciclar.setVisibility(CardView.VISIBLE);
+                                findViewById(R.id.titulo_nombre).setVisibility(View.VISIBLE);
+                                findViewById(R.id.titulo_huella).setVisibility(View.VISIBLE);
+                                findViewById(R.id.titulo_impacto).setVisibility(View.VISIBLE);
+                                findViewById(R.id.titulo_reciclar).setVisibility(View.VISIBLE);
 
                                 found = true;
                                 break;
@@ -135,10 +140,15 @@ public class Products extends AppCompatActivity {
         reciclarprod.setText("");
         imagenprod.setImageDrawable(null);
         imagenprod.setVisibility(ImageView.GONE);
+        findViewById(R.id.titulo_nombre).setVisibility(View.GONE);
+        findViewById(R.id.titulo_huella).setVisibility(View.GONE);
+        findViewById(R.id.titulo_impacto).setVisibility(View.GONE);
+        findViewById(R.id.titulo_reciclar).setVisibility(View.GONE);
 
         nombre.setVisibility(CardView.GONE);
         huella.setVisibility(CardView.GONE);
         impacto.setVisibility(CardView.GONE);
         reciclar.setVisibility(CardView.GONE);
+
     }
 }

@@ -23,11 +23,27 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barra"/>
+        app:layout_constraintTop_toBottomOf="@+id/barra" />
+
+    <!-- Título: Nombre -->
+    <TextView
+        android:id="@+id/titulo_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="4dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/nombre"
         android:layout_width="300dp"
+        style="@style/TextAppearance.Poppins"
         android:layout_height="40dp"
         android:backgroundTint="@color/verde3"
         android:visibility="gone"
@@ -45,8 +61,22 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            style="@style/TextAppearance.Poppins"/>
+            style="@style/TextAppearance.Poppins" />
     </androidx.cardview.widget.CardView>
+
+    <!-- Título: Reciclar -->
+    <TextView
+        android:id="@+id/titulo_reciclar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donde reciclar:"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/reciclar"
+        app:layout_constraintBottom_toTopOf="@+id/reciclar"
+        android:layout_marginBottom="4dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/reciclar"
@@ -55,6 +85,7 @@
         android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
+        style="@style/TextAppearance.Poppins"
         android:backgroundTint="@color/verde3"
         android:layout_marginTop="70dp"
         app:layout_constraintTop_toBottomOf="@+id/nombre"
@@ -68,8 +99,22 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            style="@style/TextAppearance.Poppins"/>
+            style="@style/TextAppearance.Poppins" />
     </androidx.cardview.widget.CardView>
+
+    <!-- Título: Huella -->
+    <TextView
+        android:id="@+id/titulo_huella"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C02 por cada 100g:"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        style="@style/TextAppearance.Poppins"
+        app:layout_constraintStart_toStartOf="@+id/huella"
+        app:layout_constraintBottom_toTopOf="@+id/huella"
+        android:layout_marginBottom="4dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/huella"
@@ -78,6 +123,7 @@
         android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
+        style="@style/TextAppearance.Poppins"
         android:backgroundTint="@color/verde3"
         android:layout_marginTop="70dp"
         app:layout_constraintTop_toBottomOf="@+id/reciclar"
@@ -91,8 +137,22 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            style="@style/TextAppearance.Poppins"/>
+            style="@style/TextAppearance.Poppins" />
     </androidx.cardview.widget.CardView>
+
+    <!-- Título: Impacto -->
+    <TextView
+        android:id="@+id/titulo_impacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Impacto mediambiental:"
+        style="@style/TextAppearance.Poppins"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/impacto"
+        app:layout_constraintBottom_toTopOf="@+id/impacto"
+        android:layout_marginBottom="4dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/impacto"
@@ -101,6 +161,7 @@
         android:visibility="gone"
         app:cardCornerRadius="8dp"
         app:cardElevation="8dp"
+        style="@style/TextAppearance.Poppins"
         android:backgroundTint="@color/verde3"
         android:layout_marginTop="70dp"
         app:layout_constraintTop_toBottomOf="@+id/huella"
@@ -114,7 +175,7 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
-            style="@style/TextAppearance.Poppins"/>
+            style="@style/TextAppearance.Poppins" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
